@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     
-    <!-- Mobile-optimized viewport - prevents zooming -->
+    <!-- Mobile-optimized viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     
     <!-- PWA settings for iOS -->
@@ -22,32 +22,38 @@
     
     <title>Chatty AI</title>
     
-    <!-- Mobile optimizations + NO SCROLL FIX -->
+    <!-- Mobile optimizations -->
     <style>
       * {
         -webkit-tap-highlight-color: transparent;
         -webkit-touch-callout: none;
+        box-sizing: border-box;
       }
       
-      html, body {
-        position: fixed;
-        overflow: hidden;
+      html {
         width: 100%;
         height: 100%;
         margin: 0;
         padding: 0;
-        /* Prevent iOS rubber-band scrolling */
+        overflow: hidden;
+        position: fixed;
+      }
+      
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: fixed;
         overscroll-behavior: none;
-        -webkit-overflow-scrolling: auto;
       }
       
       #root {
         width: 100%;
         height: 100%;
         overflow: hidden;
-        /* Prevent pull-to-refresh and overscroll */
-        overscroll-behavior: none;
-        touch-action: pan-y;
+        position: relative;
       }
       
       /* Prevent text selection on buttons */
@@ -61,13 +67,8 @@
         -webkit-user-select: text;
         user-select: text;
       }
-      
-      /* Prevent scroll on any element except explicitly allowed */
-      * {
-        overscroll-behavior: none;
-      }
     </style>
-    <script type="module" crossorigin src="/Chatty-AI/assets/index-CP4WZSoc.js"></script>
+    <script type="module" crossorigin src="/Chatty-AI/assets/index-CAp3A_U5.js"></script>
     <link rel="stylesheet" crossorigin href="/Chatty-AI/assets/index-BPIHhU49.css">
   </head>
   <body>
