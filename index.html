@@ -1,13 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    
+    <!-- Mobile-optimized viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <!-- PWA settings for iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Chatty AI">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/Chatty-AI/manifest.json">
+    
+    <!-- App icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/Chatty-AI/icons/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/Chatty-AI/icons/icon-512.png">
+    <link rel="apple-touch-icon" href="/Chatty-AI/icons/icon-192.png">
+    
     <title>Chatty AI</title>
+    
+    <!-- Mobile optimizations -->
+    <style>
+      * {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        box-sizing: border-box;
+      }
+      
+      html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: fixed;
+      }
+      
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: fixed;
+        overscroll-behavior: none;
+      }
+      
+      #root {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      /* Prevent text selection on buttons */
+      button, a {
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      
+      /* Allow text selection in inputs */
+      input, textarea {
+        -webkit-user-select: text;
+        user-select: text;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
